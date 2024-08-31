@@ -44,6 +44,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/site/images");
   eleventyConfig.addPassthroughCopy("./src/site/js/*.js");
   
+  
+  
   return {
     dir: {
       input: "src/site",
@@ -51,6 +53,9 @@ export default function (eleventyConfig) {
       includes: "_includes",
       layouts: "_includes/layouts"
     },
-    markdownTemplateEngine: "njk"
+    templateFormats : ["njk", "md"],
+    htmlTemplateEngine : "njk",
+    markdownTemplateEngine : "njk",
+    passthroughFileCopy: true
   };
 }

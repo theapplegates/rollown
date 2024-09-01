@@ -41,9 +41,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode("lazypicture", lazypicture);
   
   // pass some assets right through
-  eleventyConfig.addPassthroughCopy("./src/site/images");
-  eleventyConfig.addPassthroughCopy("./src/site/js/*.js");
-  
+  eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/site/images");
+  eleventyConfig.addPassthroughCopy("src/site/js");
+  eleventyConfig.addPassthroughCopy("src/fonts");
+  eleventyConfig.addPassthroughCopy('src/*.{css,js,jpg,ico}');
   
   
   return {
